@@ -1,5 +1,5 @@
 document.getElementById('ville').addEventListener('change', function(){
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${this.value}&units=metric&appid=4802d916ef4ea849a434c682b46cdb10&lang=fr`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${this.value}&units=metric&appid=4802d916ef4ea849a434c682b46cdb10&lang=fr`;
     fetch(url)
         .then((reponse) => 
         reponse.json()
