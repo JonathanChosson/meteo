@@ -1,0 +1,36 @@
+.article{
+    width: auto;
+    text-align: center;
+    padding-bottom: 15px;
+    &__ul{
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        & :nth-child(1){
+            background-color: rgba($color: $couleur_primaire, $alpha: 0.7);
+        }
+        & :nth-child(2){
+            background-color: rgba($color: $couleur_secondaire, $alpha: 0.7);
+        }
+        & :nth-child(3){
+            background-color: rgba($color: $couleur_tertiaire, $alpha: 0.7);
+        }
+        & :nth-child(4){
+            background-color: rgba($color: $couleur_fond_gris_clair, $alpha: 0.7);
+        }
+        &--li{
+            text-align: center;
+            line-height: 40px;
+            width: 50%;
+            height: 100px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4rem;
+            & .fas{
+                background-color: transparent;
+            }
+        }
+    }
+}

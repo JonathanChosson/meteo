@@ -1,6 +1,9 @@
 body {
   margin: 0px;
   padding: 0px;
+  background-image: url("../images/mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 main {
@@ -21,7 +24,7 @@ main * {
   padding-bottom: 15px;
 }
 .header__h1 {
-  color: #9356DC;
+  color: #06b8c5;
   padding: 10px;
 }
 .header__form {
@@ -36,6 +39,43 @@ main * {
 }
 .header__form label {
   padding: 10px;
+}
+
+.article {
+  width: auto;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.article__ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.article__ul :nth-child(1) {
+  background-color: rgba(6, 184, 197, 0.7);
+}
+.article__ul :nth-child(2) {
+  background-color: rgba(29, 142, 248, 0.7);
+}
+.article__ul :nth-child(3) {
+  background-color: rgba(153, 226, 208, 0.7);
+}
+.article__ul :nth-child(4) {
+  background-color: rgba(239, 239, 239, 0.7);
+}
+.article__ul--li {
+  text-align: center;
+  line-height: 40px;
+  width: 50%;
+  height: 100px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+.article__ul--li .fas {
+  background-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
