@@ -1,0 +1,19 @@
+{
+  "name": "meteo",
+  "version": "1.0.0",
+  "description": "Objectif : Réaliser un site qui serai en une page dynamique grace à JS et api OpenWeather",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanChosson/meteo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonathanChosson/meteo/issues"
+  },
+  "homepage": "https://github.com/JonathanChosson/meteo#readme"
+}
