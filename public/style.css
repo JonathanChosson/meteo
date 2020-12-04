@@ -14,4 +14,28 @@ main * {
   padding: 0px;
 }
 
+.header {
+  width: auto;
+  text-align: center;
+  background-color: #EFEFEF;
+  padding-bottom: 15px;
+}
+.header__h1 {
+  color: #9356DC;
+  padding: 10px;
+}
+.header__form {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.header__form input {
+  width: 50%;
+  color: black;
+}
+.header__form label {
+  padding: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */

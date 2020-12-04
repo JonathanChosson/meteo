@@ -1,0 +1,23 @@
+.header {
+    width: auto;
+    text-align: center;
+    background-color: $couleur_fond_grisClair;
+    padding-bottom: 15px;
+    &__h1{
+        color : $couleur_primaire;
+        padding: 10px;
+    }
+    &__form {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        & input{
+            width: 50%;
+            color: black;
+        }
+        & label{
+            padding: 10px;
+        }
+    }
+}
