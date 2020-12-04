@@ -20,7 +20,7 @@ main * {
 .header {
   width: auto;
   text-align: center;
-  background-color: #EFEFEF;
+  background-color: rgba(234, 234, 234, 0.8);
   padding-bottom: 15px;
 }
 .header__h1 {

@@ -1,7 +1,7 @@
 .header {
     width: auto;
     text-align: center;
-    background-color: $couleur_fond_gris_clair;
+    background-color: rgba($color: $couleur_fond_gris, $alpha: 0.8);
     padding-bottom: 15px;
     &__h1{
         color : $couleur_primaire;
