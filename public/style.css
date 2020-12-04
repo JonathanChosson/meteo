@@ -67,7 +67,7 @@ main * {
   text-align: center;
   line-height: 40px;
   width: 50%;
-  height: 100px;
+  height: 150px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
