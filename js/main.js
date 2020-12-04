@@ -1,5 +1,12 @@
-document.getElementById('ville').addEventListener('change', function(){
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${this.value}&units=metric&appid=4802d916ef4ea849a434c682b46cdb10&lang=fr`;
+let ville;
+document.querySelector('#ville').addEventListener('change', function(){
+    ville = this.value;
+})
+
+document.querySelector('.header__form--btn').addEventListener('click', function(event){
+    event.preventDefault();
+    console.log(ville);
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${ville}&units=metric&appid=4802d916ef4ea849a434c682b46cdb10&lang=fr`;
     fetch(url)
         .then((reponse) => 
         reponse.json()

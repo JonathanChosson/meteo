@@ -9,15 +9,24 @@
     }
     &__form {
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: row wrap;
         justify-content: center;
         align-items: center;
         & input{
             width: 50%;
             color: black;
+            font-size: 1.5rem;
         }
         & label{
             padding: 10px;
+            font-size: 1.3rem;
+            flex: 1 100%;
+        }
+        &--btn{
+            border: none;
+            background-color: transparent;
+            padding: 5px;
+            font-size: 1.3rem;
         }
     }
 }
