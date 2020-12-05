@@ -22,5 +22,5 @@ document.querySelector('.header__form--btn').addEventListener('click', function(
             i+=1;
             tab[i].innerHTML = tab[i].innerHTML.replace(tab[i].innerText, data.wind.speed) + " km/h";
         })
-        ).catch(erreur => console.log('Ville non trouvé'));
+        ).catch(erreur => alert('Ville non trouvé'));
 });
