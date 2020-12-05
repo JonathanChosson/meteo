@@ -6,7 +6,7 @@
         list-style-type: none;
         display: flex;
         flex-wrap: wrap;
-        & :nth-child(1){
+        &:nth-child(1){
             background-color: rgba($color: $couleur_primaire, $alpha: 0.7);
         }
         & :nth-child(2){
@@ -29,6 +29,9 @@
             align-items: center;
             font-size: 1.4rem;
             & .fas{
+                background-color: transparent;
+            }
+            & img{
                 background-color: transparent;
             }
         }

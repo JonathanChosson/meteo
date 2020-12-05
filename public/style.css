@@ -60,7 +60,7 @@ main * {
   display: flex;
   flex-wrap: wrap;
 }
-.article__ul :nth-child(1) {
+.article__ul:nth-child(1) {
   background-color: rgba(6, 184, 197, 0.7);
 }
 .article__ul :nth-child(2) {
@@ -84,6 +84,9 @@ main * {
   font-size: 1.4rem;
 }
 .article__ul--li .fas {
+  background-color: transparent;
+}
+.article__ul--li img {
   background-color: transparent;
 }
 
