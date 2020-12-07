@@ -16,11 +16,14 @@ document.querySelector('.header__form--btn').addEventListener('click', function(
             let tab = document.querySelectorAll('ul li');
             let i = 0;
             let iconCode =data.weather[0].icon;
-            let iconUrl =`<img src="http://openweathermap.org/img/w/${iconCode}.png" alt="Condition Actuelles" />`; 
-            //tab[i].innerHTML = tab[i].innerHTML.replace(tab[i].innerText, data.name);
+            let iconUrl =`<img src="http://openweathermap.org/img/w/${iconCode}.png" alt="Condition Actuelles" />`;
             tab[i].innerHTML = iconUrl + data.name;
             i += 1;
             tab[i].innerHTML = tab[i].innerHTML.replace(tab[i].innerText, data.main.temp) + "°";
+            i += 1;
+            tab[i].innerHTML = tab[i].innerHTML.replace(tab[i].innerText, data.main.temp_min) + "°";
+            i += 1;
+            tab[i].innerHTML = tab[i].innerHTML.replace(tab[i].innerText, data.main.temp_max) + "°";
             i +=1;
             tab[i].innerHTML = tab[i].innerHTML.replace(tab[i].innerText, data.main.humidity) + " %";
             i+=1;

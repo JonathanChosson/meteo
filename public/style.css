@@ -1,9 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-image: url("../images/mobile.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: rgba(66, 199, 252, 0.685);
 }
 
 main {
@@ -60,18 +58,6 @@ main * {
   display: flex;
   flex-wrap: wrap;
 }
-.article__ul:nth-child(1) {
-  background-color: rgba(6, 184, 197, 0.7);
-}
-.article__ul :nth-child(2) {
-  background-color: rgba(29, 142, 248, 0.7);
-}
-.article__ul :nth-child(3) {
-  background-color: rgba(153, 226, 208, 0.7);
-}
-.article__ul :nth-child(4) {
-  background-color: rgba(239, 239, 239, 0.7);
-}
 .article__ul--li {
   text-align: center;
   line-height: 40px;
@@ -88,6 +74,30 @@ main * {
 }
 .article__ul--li img {
   background-color: transparent;
+}
+.article__ul--li p {
+  flex: 1 100%;
+  background-color: transparent;
+  height: 10px;
+  font-size: 9px;
+}
+.article__ul:nth-child(1) {
+  background-color: rgba(6, 184, 197, 0.7);
+}
+.article__ul :nth-child(2) {
+  background-color: rgba(29, 142, 248, 0.7);
+}
+.article__ul :nth-child(3) {
+  background-color: rgba(153, 226, 208, 0.7);
+}
+.article__ul :nth-child(4) {
+  background-color: rgba(239, 239, 239, 0.7);
+}
+.article__ul :nth-child(5) {
+  background-color: rgba(29, 142, 248, 0.7);
+}
+.article__ul :nth-child(6) {
+  background-color: rgba(6, 184, 197, 0.7);
 }
 
 /*# sourceMappingURL=style.css.map */
