@@ -47,6 +47,9 @@ main * {
   padding: 5px;
   font-size: 1.3rem;
 }
+.header__form--btn--hidden {
+  display: none;
+}
 
 .article {
   width: auto;

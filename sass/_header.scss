@@ -27,6 +27,9 @@
             background-color: transparent;
             padding: 5px;
             font-size: 1.3rem;
+            &--hidden{
+                display: none;
+            }
         }
     }
 }

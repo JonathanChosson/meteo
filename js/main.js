@@ -39,12 +39,12 @@ document.querySelector('.header__form--btn').addEventListener('click', function(
             let icon = data2.list[i2].weather[0].icon;
             let iconUrl2 = `<img src="http://openweathermap.org/img/w/${icon}.png" alt="Condition à ${data2.list[i2].dt_txt.substring(11, 16)} Heures" />`;
             let heure = data2.list[i2].dt_txt.substring(11, 16) + " H";
-            tab2[i3].innerHTML =`<span class="far fa-clock"></span> ${heure}`;
+            tab2[i3].innerHTML =`<span class="far fa-clock"></span> ${heure} <br />`;
             tab2[i3].innerHTML += iconUrl2;
             tab2[i3].innerHTML +=`<p><span class="fas fa-thermometer-three-quarters"></span> ${data2.list[i2].main.temp}°</p>`;
             tab2[i3].innerHTML +=`<p><span class="fas fa-tint"></span> ${data2.list[i2].main.humidity} %</p>`;
             tab2[i3].innerHTML +=`<p><span class="fas fa-wind"></span> ${data2.list[i2].wind.speed} km/h</p>`;
         }
         })
-        ).catch(erreur => console.log('Ville non trouvé'));
+        ).catch(erreur => alert('Ville non trouvé'));
 });
