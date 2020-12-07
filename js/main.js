@@ -34,15 +34,16 @@ document.querySelector('.header__form--btn').addEventListener('click', function(
         .then((data2) => {
             console.log(data2);
             let tab2 = document.querySelectorAll('.article__ul--li--last__ul__li');
-            for (let i2 =0; i2 < 3 ; i2++) {
+            for (let i2 =1; i2 < 4 ; i2++) {
+            let i3 = i2 -1;
             let icon = data2.list[i2].weather[0].icon;
             let iconUrl2 = `<img src="http://openweathermap.org/img/w/${icon}.png" alt="Condition à ${data2.list[i2].dt_txt.substring(11, 16)} Heures" />`;
             let heure = data2.list[i2].dt_txt.substring(11, 16) + " H";
-            tab2[i2].innerHTML =`<span class="far fa-clock"></span> ${heure}`;
-            tab2[i2].innerHTML += iconUrl2;
-            tab2[i2].innerHTML +=`<p><span class="fas fa-thermometer-three-quarters"></span> ${data2.list[i2].main.temp}°</p>`;
-            tab2[i2].innerHTML +=`<p><span class="fas fa-tint"></span> ${data2.list[i2].main.humidity} %</p>`;
-            tab2[i2].innerHTML +=`<p><span class="fas fa-wind"></span> ${data2.list[i2].wind.speed} km/h</p>`;
+            tab2[i3].innerHTML =`<span class="far fa-clock"></span> ${heure}`;
+            tab2[i3].innerHTML += iconUrl2;
+            tab2[i3].innerHTML +=`<p><span class="fas fa-thermometer-three-quarters"></span> ${data2.list[i2].main.temp}°</p>`;
+            tab2[i3].innerHTML +=`<p><span class="fas fa-tint"></span> ${data2.list[i2].main.humidity} %</p>`;
+            tab2[i3].innerHTML +=`<p><span class="fas fa-wind"></span> ${data2.list[i2].wind.speed} km/h</p>`;
         }
         })
         ).catch(erreur => console.log('Ville non trouvé'));
