@@ -1,6 +1,7 @@
 let ville;
 document.querySelector('#ville').addEventListener('change', function(){
-    ville = this.value;
+    ville = this.value.replace(/ /g, "-");
+    ville = ville.replace(/-$/, "");
 })
 
 document.querySelector('.header__form--btn').addEventListener('click', function(event){
