@@ -57,6 +57,7 @@ main * {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  animation: menu 1000ms 0ms both;
 }
 .article__ul--li {
   text-align: center;
@@ -68,6 +69,7 @@ main * {
   justify-content: center;
   align-items: center;
   font-size: 1.4rem;
+  animation: menu 1000ms 500ms both;
 }
 .article__ul--li--last {
   flex: 1 100%;
@@ -79,12 +81,23 @@ main * {
 }
 .article__ul--li--last__ul__li {
   text-align: center;
-  width: 28.5%;
-  padding: 10px;
+  width: 33.33%;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-size: 1.4rem;
+  animation: menu 1000ms 1200ms both;
 }
 .article__ul--li--last__ul__li p {
   background-color: transparent;
+}
+.article__ul--li--last__ul__li:nth-child(1) {
+  background-color: rgba(6, 184, 197, 0.7);
+}
+.article__ul--li--last__ul__li:nth-child(2) {
+  background-color: rgba(29, 142, 248, 0.7);
+}
+.article__ul--li--last__ul__li:nth-child(3) {
+  background-color: rgba(153, 226, 208, 0.7);
 }
 .article__ul--li:nth-child(1) {
   background-color: rgba(6, 184, 197, 0.7);
@@ -97,6 +110,21 @@ main * {
 }
 .article__ul--li:nth-child(4) {
   background-color: rgba(239, 239, 239, 0.7);
+}
+
+@keyframes menu {
+  0% {
+    margin-bottom: -70px;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+  }
+  100% {
+    margin-bottom: 0px;
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

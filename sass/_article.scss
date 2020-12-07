@@ -6,6 +6,7 @@
         list-style-type: none;
         display: flex;
         flex-wrap: wrap;
+        animation: menu 1000ms 0ms both;
         &--li{
             text-align: center;
             line-height: 40px;
@@ -16,6 +17,7 @@
             justify-content: center;
             align-items: center;
             font-size: 1.4rem;
+            animation: menu 1000ms 500ms both;
             &--last{
                 flex: 1 100%;
                 &__ul{
@@ -24,27 +26,38 @@
                     flex-flow: row wrap;
                     &__li{
                         text-align: center;
-                        width: 28.50%;
-                        padding: 10px;
+                        width: 33.33%;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
                         font-size: 1.4rem;
+                        animation: menu 1000ms 1200ms both;
                         & p{
                             background-color: transparent;
                         }
                     }
+                    &__li:nth-child(1){
+                        background-color: rgba($color: $couleur_primaire, $alpha: 0.7);
+                    }
+                    &__li:nth-child(2){
+                        background-color: rgba($color: $couleur_secondaire, $alpha: 0.7);
+                    }
+                    &__li:nth-child(3){
+                        background-color: rgba($color: $couleur_tertiaire, $alpha: 0.7);
+                    }
                 }
             }
         }
-        &--li:nth-child(1){
-            background-color: rgba($color: $couleur_primaire, $alpha: 0.7);
-        }
-        &--li:nth-child(2){
-            background-color: rgba($color: $couleur_secondaire, $alpha: 0.7);
-        }
-        &--li:nth-child(3){
-            background-color: rgba($color: $couleur_tertiaire, $alpha: 0.7);
-        }
-        &--li:nth-child(4){
-            background-color: rgba($color: $couleur_fond_gris_clair, $alpha: 0.7);
-        }
+    &--li:nth-child(1){
+        background-color: rgba($color: $couleur_primaire, $alpha: 0.7);
+    }
+    &--li:nth-child(2){
+        background-color: rgba($color: $couleur_secondaire, $alpha: 0.7);
+    }
+    &--li:nth-child(3){
+        background-color: rgba($color: $couleur_tertiaire, $alpha: 0.7);
+    }
+    &--li:nth-child(4){
+        background-color: rgba($color: $couleur_fond_gris_clair, $alpha: 0.7);
+    }
     }
 }

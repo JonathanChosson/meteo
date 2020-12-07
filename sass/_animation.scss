@@ -1,0 +1,14 @@
+@keyframes menu {
+    0%{
+        margin-bottom:-70px;
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: 100% 0%;
+    }
+    100%{
+        margin-bottom:0px;
+        opacity: 1;
+        transform: scaleY(1);
+        transform-origin: 100% 0%;
+    }
+}
