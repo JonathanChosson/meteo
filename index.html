@@ -16,8 +16,8 @@
         </h1>
         <form class="header__form">
             <label for="ville">Saisissez votre ville</label>
-            <input type="text" min length="3" name="ville" id="ville" required placeholder="Saisir ville ici" />
-            <button type="submit" class="header__form--btn">
+            <input type="text" min length="3" name="ville" id="ville" required placeholder="Saisir ville ici" aria-label="Saisi ville ici"/>
+            <button type="submit" class="header__form--btn" aria-label="envoyer">
                 <span class="fas fa-arrow-right">
                 <span class="header__form--btn--hidden">go</span>
             </button>
@@ -32,8 +32,6 @@
         <ul class="article__ul">
             <li class="article__ul--li"><span class="fas fa-cloud"></span> Ville</li>
             <li class="article__ul--li"><span class="fas fa-thermometer-three-quarters"></span> Température</li>
-            <!-- <li class="article__ul--li"><i class="fas fa-arrow-down"></i> Min</li>
-            <li class="article__ul--li"><i class="fas fa-arrow-up"></i> Max</li> -->
             <li class="article__ul--li"><span class="fas fa-tint"></span>Humidité</li>
             <li class="article__ul--li"><span class="fas fa-wind"></span>Vent</li>
             <li class="article__ul--li--last">
