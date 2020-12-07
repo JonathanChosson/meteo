@@ -16,36 +16,35 @@
             justify-content: center;
             align-items: center;
             font-size: 1.4rem;
-            & .fas{
-                background-color: transparent;
-            }
-            & img{
-                background-color: transparent;
-            }
-            & p{
+            &--last{
                 flex: 1 100%;
-                background-color: transparent;
-                height: 10px;
-                font-size: 9px;
+                &__ul{
+                    list-style-type: none;
+                    display: flex;
+                    flex-flow: row wrap;
+                    &__li{
+                        text-align: center;
+                        width: 28.50%;
+                        padding: 10px;
+                        font-size: 1.4rem;
+                        & p{
+                            background-color: transparent;
+                        }
+                    }
+                }
             }
         }
-        &:nth-child(1){
+        &--li:nth-child(1){
             background-color: rgba($color: $couleur_primaire, $alpha: 0.7);
         }
-        & :nth-child(2){
+        &--li:nth-child(2){
             background-color: rgba($color: $couleur_secondaire, $alpha: 0.7);
         }
-        & :nth-child(3){
+        &--li:nth-child(3){
             background-color: rgba($color: $couleur_tertiaire, $alpha: 0.7);
         }
-        & :nth-child(4){
+        &--li:nth-child(4){
             background-color: rgba($color: $couleur_fond_gris_clair, $alpha: 0.7);
-        }
-        & :nth-child(5){
-            background-color: rgba($color: $couleur_secondaire, $alpha: 0.7);
-        }
-        & :nth-child(6){
-            background-color: rgba($color: $couleur_primaire, $alpha: 0.7);
         }
     }
 }
