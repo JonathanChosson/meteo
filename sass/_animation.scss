@@ -12,3 +12,15 @@
         transform-origin: 100% 0%;
     }
 }
+
+.animation0delay{
+    animation: menu 1000ms 0ms both;
+}
+
+.animation500delay{
+    animation: menu 1000ms 500ms both;
+}
+
+.animation1200delay{
+    animation: menu 1000ms 1200ms both;
+}

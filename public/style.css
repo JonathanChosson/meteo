@@ -63,7 +63,6 @@ main * {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  animation: menu 1000ms 0ms both;
 }
 .article__ul--li {
   text-align: center;
@@ -75,7 +74,6 @@ main * {
   justify-content: center;
   align-items: center;
   font-size: 1.4rem;
-  animation: menu 1000ms 500ms both;
 }
 .article__ul--li--last {
   flex: 1 100%;
@@ -91,7 +89,6 @@ main * {
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 1.4rem;
-  animation: menu 1000ms 1200ms both;
 }
 .article__ul--li--last__ul__li p {
   background-color: transparent;
@@ -141,6 +138,17 @@ footer a {
     transform: scaleY(1);
     transform-origin: 100% 0%;
   }
+}
+.animation0delay {
+  animation: menu 1000ms 0ms both;
+}
+
+.animation500delay {
+  animation: menu 1000ms 500ms both;
+}
+
+.animation1200delay {
+  animation: menu 1000ms 1200ms both;
 }
 
 /*# sourceMappingURL=style.css.map */
