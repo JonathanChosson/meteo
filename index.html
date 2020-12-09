@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site météo en france" />
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="./public/style.css" />
     <script src="https://kit.fontawesome.com/0c9cc5d14e.js" crossorigin="anonymous"></script>
     <title>Simple Meteo</title>
@@ -11,36 +14,41 @@
 <body>
     <main>
         <!-- Début header -->
-        <header class="header">
-        <h1 class="header__h1">
-            <a href="./index.html">Simple météo</a>
-        </h1>
-        <form class="header__form">
-            <label for="ville">Saisissez votre ville</label>
-            <input type="text" min-length="3" name="ville" id="ville" required placeholder="Saisir ville ici" aria-label="Saisi ville ici"/>
-            <button type="submit" class="header__form--btn" aria-label="envoyer" >
-                <span class="fas fa-arrow-right">
-                <span class="header__form--btn--hidden">go</span></span>
-            </button>
-        </form>
-    </header>
+        <div class="container">
+            <header class="header">
+                <h1 class="header__h1">
+                    <img src="./images/compass.svg" alt="Logo Simple Météo" />
+                    <a href="./index.html">Simple météo</a>
+                </h1>
+                <form class="header__form">
+                    <label for="ville">Saisissez votre ville</label>
+                    <input type="text" min-length="3" name="ville" id="ville" required placeholder="Saisir ville ici" aria-label="Saisi ville ici"/>
+                    <button type="submit" class="header__form--btn" aria-label="envoyer" >
+                        <span class="fas fa-arrow-right">
+                        <span class="header__form--btn--hidden">go</span></span>
+                    </button>
+                </form>
+            </header>
+        </div>
     <!-- Fin header -->
     <!-- Début article -->
-    <article class="article">
-        <ul class="article__ul animation0delay">
-            <li class="article__ul--li animation500delay"><span class="fas fa-cloud"></span> Ville</li>
-            <li class="article__ul--li animation500delay"><span class="fas fa-thermometer-three-quarters"></span> Température</li>
-            <li class="article__ul--li animation500delay"><span class="fas fa-tint"></span>Humidité</li>
-            <li class="article__ul--li animation500delay"><span class="fas fa-wind"></span>Vent</li>
-            <li class="article__ul--li--last">
-                <ul class="article__ul--li--last__ul">
-                    <li class="article__ul--li--last__ul__li animation1200delay"><span class="far fa-clock"></span> +3h</li>
-                    <li class="article__ul--li--last__ul__li animation1200delay"><span class="far fa-clock"></span> +6h</li>
-                    <li class="article__ul--li--last__ul__li animation1200delay"><span class="far fa-clock"></span> +9h</li>
-                </ul>
-            </li>
-        </ul>
-    </article>
+    <div class="container">
+        <article class="article">
+            <ul class="article__ul animation0delay">
+                <li class="article__ul--li rounded animation500delay"><span class="fas fa-cloud"></span> Ville</li>
+                <li class="article__ul--li rounded animation500delay"><span class="fas fa-thermometer-three-quarters"></span> Température</li>
+                <li class="article__ul--li rounded animation500delay"><span class="fas fa-tint"></span>Humidité</li>
+                <li class="article__ul--li rounded animation500delay"><span class="fas fa-wind"></span>Vent</li>
+                <li class="article__ul--li--last">
+                    <ul class="article__ul--li--last__ul">
+                        <li class="article__ul--li--last__ul__li rounded animation1200delay"><span class="far fa-clock"></span> +3h</li>
+                        <li class="article__ul--li--last__ul__li rounded animation1200delay"><span class="far fa-clock"></span> +6h</li>
+                        <li class="article__ul--li--last__ul__li rounded animation1200delay"><span class="far fa-clock"></span> +9h</li>
+                    </ul>
+                </li>
+            </ul>
+        </article>
+    </div>
     <!-- fin Article -->
     <!-- Début footer -->
     <footer class="footer">
@@ -52,5 +60,7 @@
     <!-- Fichier JS -->
     <script src="./js/animation.js"></script>
     <script src="./js/main.js"></script>
+    <!-- JS bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
