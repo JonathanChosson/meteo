@@ -26,26 +26,27 @@ function majCookie() {
         for(u in tableauRecherches){
             afficheTableauRecherche[0].innerHTML += `<p class="header__span__p">${tableauRecherches[u]}</p>`
         }
-    }
-    let btnHisto = document.getElementsByClassName('header__span__p');
-    console.log(btnHisto.length);
-    if(btnHisto.length == 0) {
-    }else {
-        for(t in btnHisto){
-            console.log(btnHisto[t].innerHTML);
-            if(btnHisto[t].innerHTML != undefined){
-                btnHisto[t].addEventListener('click', function(event){
-                event.preventDefault();
-                console.log(event.target.innerHTML);
-            })
+        // affiche les boutons de l'historique 
+        let btnHisto = document.getElementsByClassName('header__span__p');
+        console.log(btnHisto.length);
+        if(btnHisto.length == 0) {
+        }else {
+            for(t in btnHisto){
+                console.log(btnHisto[t].innerHTML);
+                if(btnHisto[t].innerHTML != undefined){
+                    btnHisto[t].addEventListener('click', function(event){
+                    event.preventDefault();
+                    console.log(event.target.innerHTML);
+                    let url = `https://api.openweathermap.org/data/2.5/weather?q=${event.target.innerHTML},fr&units=metric&appid=4802d916ef4ea849a434c682b46cdb10&lang=fr`;
+                    let url3j = `https://api.openweathermap.org/data/2.5/forecast?q=${event.target.innerHTML},fr&units=metric&appid=4802d916ef4ea849a434c682b46cdb10&lang=fr`;
+                    appelAPI(url, url3j, event.target.innerHTML);
+                })
+                }
             }
         }
     }
 };
 majCookie();
-
-
-
 
 document.querySelector('.header__form--btn').addEventListener('click', function(event){
     event.preventDefault();
@@ -53,6 +54,10 @@ document.querySelector('.header__form--btn').addEventListener('click', function(
 
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${ville},fr&units=metric&appid=4802d916ef4ea849a434c682b46cdb10&lang=fr`;
     let url3j = `https://api.openweathermap.org/data/2.5/forecast?q=${ville},fr&units=metric&appid=4802d916ef4ea849a434c682b46cdb10&lang=fr`;
+    appelAPI(url, url3j, ville);
+});
+
+function appelAPI(url, url3j, ville) {
     fetch(url)
         .then((reponse) => 
         reponse.json()
@@ -80,6 +85,7 @@ document.querySelector('.header__form--btn').addEventListener('click', function(
                 tab[i].classList.add("animation500delay");
             }, 100);
             //vérifie si la ville existe déjà et rempli le cookie au besoin
+            console.log(ville);
             if(tableauRecherches.indexOf(ville) !== -1){
 
             }else{
@@ -115,5 +121,4 @@ document.querySelector('.header__form--btn').addEventListener('click', function(
         }
         })
         ).catch(erreur => alert('Ville non trouvé'));
-        
-});
+}
