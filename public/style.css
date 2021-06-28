@@ -16,6 +16,371 @@ main * {
   padding: 0px;
 }
 
+.hot {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  background: linear-gradient(to top right, #ff5722 0%, #fb8c00 100%);
+  box-shadow: 1px 1px 30px #ff6f00;
+}
+
+.sun {
+  position: absolute;
+  top: -10%;
+  left: 65%;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: linear-gradient(to bottom left, #ffeb3b 0%, #f9a825 90%);
+  box-shadow: 1px 1px 30px #ffa000;
+  animation: inex 3s infinite linear;
+}
+
+.sunx {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #fff;
+  opacity: 0.2;
+}
+
+.cloudy {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  background: linear-gradient(to top right, #3f51b5 0%, #039be5 40%);
+  box-shadow: 1px 1px 30px #0277bd;
+}
+
+.cloud {
+  position: absolute;
+  top: 5%;
+  left: 70%;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #81d4fa;
+  box-shadow: 1px 1px 30px #0097a7;
+  animation: move 3s infinite linear;
+}
+
+.cloudx {
+  position: absolute;
+  top: 23%;
+  left: 55%;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #81d4fa;
+  animation: move 3s infinite linear;
+}
+
+.stormy {
+  position: absolute;
+  top: 25%;
+  left: 70%;
+  background: linear-gradient(to top right, #757575 0%, #212121 90%);
+  box-shadow: 1px 1px 30px #212121;
+}
+
+.stormy li {
+  position: absolute;
+  list-style: none;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #777;
+  box-shadow: 1px 1px 30px #555;
+  animation: fall 3s infinite linear;
+  opacity: 0;
+}
+
+.stormy li:nth-child(1) {
+  top: 0%;
+  left: 100%;
+}
+
+.stormy li:nth-child(2) {
+  top: 5%;
+  left: 90%;
+}
+
+.stormy li:nth-child(3) {
+  top: -10%;
+  left: 80%;
+  animation-delay: 2s;
+}
+
+.stormy li:nth-child(4) {
+  top: 10%;
+  left: 100%;
+  animation-delay: 2s;
+}
+
+.stormy li:nth-child(5) {
+  top: 20%;
+  left: 80%;
+  animation-delay: 0.5s;
+}
+
+.stormy li:nth-child(6) {
+  top: 35%;
+  left: 70%;
+  background-color: #bbb;
+  animation-delay: 0.5s;
+}
+
+.stormy li:nth-child(7) {
+  top: 23%;
+  left: 60%;
+  background-color: #bbb;
+  animation-delay: 0.8s;
+}
+
+.stormy li:nth-child(8) {
+  top: 5%;
+  left: 70%;
+  background-color: #bbb;
+  animation-delay: 0.8s;
+}
+
+.snowe {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  width: 40px;
+  height: 40px;
+  border-radius: 60px;
+  background-color: #ddd;
+}
+
+.snowex {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: #bbb;
+}
+
+.stick {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  width: 3px;
+  height: 15px;
+  transform: rotate(-45deg);
+  background-color: #333;
+  z-index: -10;
+}
+
+.stick2 {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  width: 3px;
+  height: 15px;
+  transform: rotate(45deg);
+  background-color: #333;
+  z-index: -10;
+}
+
+.breezy {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  background: linear-gradient(to top right, #9ccc65 0%, #26c6da 50%);
+  box-shadow: 1px 1px 30px #26c6da;
+}
+
+.cloudr {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #607d8b;
+  box-shadow: 1px 1px 30px #546e7a;
+  animation: flash 1.5s infinite linear;
+}
+
+.breezy li {
+  position: absolute;
+  list-style: none;
+  width: 2px;
+  height: 7px;
+  border-radius: 10%;
+  background-color: #eee;
+  opacity: 0;
+  animation: fall 3s infinite linear;
+  transform: rotate(25deg);
+}
+
+.breezy li:nth-child(1) {
+  top: 10%;
+  left: 95%;
+}
+
+.breezy li:nth-child(2) {
+  top: 5%;
+  left: 83%;
+  animation-delay: 0.3s;
+}
+
+.breezy li:nth-child(3) {
+  top: 4%;
+  left: 87%;
+  animation-delay: 0.6s;
+}
+
+.breezy li:nth-child(4) {
+  top: 15%;
+  left: 70%;
+  animation-delay: 1s;
+}
+
+.breezy li:nth-child(5) {
+  top: 10%;
+  left: 75%;
+}
+
+.night {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  background: linear-gradient(to bottom right, #3f51b5 0%, #ab47bc 70%);
+  box-shadow: 1px 1px 30px #512da8;
+}
+
+.moon {
+  position: absolute;
+  top: -10%;
+  left: 65%;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background: #fff176;
+  box-shadow: 1px 1px 30px #e0e0e0;
+}
+
+.spot1 {
+  position: absolute;
+  top: 0%;
+  left: 85%;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #777;
+}
+
+.spot2 {
+  position: absolute;
+  top: 30%;
+  left: 75%;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #777;
+}
+
+.night li {
+  position: absolute;
+  list-style: none;
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+
+.night li:nth-child(1) {
+  top: 30%;
+  left: 65%;
+}
+
+.night li:nth-child(2) {
+  top: 35%;
+  left: 53%;
+}
+
+.night li:nth-child(3) {
+  opacity: 0;
+  top: 20%;
+  left: 75%;
+  width: 2px;
+  height: 2px;
+  animation: meteor 1.5s infinite linear;
+  animation-delay: 0.6s;
+}
+
+.night li:nth-child(4) {
+  top: 5%;
+  left: 50%;
+}
+
+.night li:nth-child(5) {
+  opacity: 0;
+  top: 20%;
+  left: 55%;
+  width: 1px;
+  height: 15px;
+  animation: meteor 1.5s infinite linear;
+}
+
+@keyframes inex {
+  50% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 1;
+  }
+}
+@keyframes move {
+  50% {
+    transform: translateX(-10px);
+  }
+}
+@keyframes fall {
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-10px, 30px);
+  }
+  100% {
+    transform: translate(-25px, 70px);
+  }
+}
+@keyframes flash {
+  48% {
+    background-color: #607d8b;
+  }
+  50% {
+    background-color: #fff;
+  }
+  55% {
+    background-color: #607d8b;
+  }
+  57% {
+    background-color: #fff;
+  }
+}
+@keyframes meteor {
+  10% {
+    opacity: 1;
+  }
+  80% {
+    left: 10%;
+    top: 75%;
+    opacity: 0;
+  }
+}
 .header {
   width: auto;
   text-align: center;
@@ -81,13 +446,16 @@ main * {
 .article__ul {
   list-style-type: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
   margin-bottom: 5px;
+  width: 100%;
 }
 .article__ul--li {
   text-align: center;
   line-height: 40px;
-  width: 46.5%;
+  width: 46%;
   height: 150px;
   display: flex;
   flex-flow: column nowrap;
@@ -103,12 +471,14 @@ main * {
 .article__ul--li--last__ul {
   list-style-type: none;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
   margin-top: 5px;
 }
 .article__ul--li--last__ul__li {
   text-align: center;
-  width: 30%;
+  width: 29%;
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 1.4rem;
