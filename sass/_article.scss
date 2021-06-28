@@ -5,30 +5,38 @@
         list-style-type: none;
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 5px;
         //animation: menu 1000ms 0ms both;
         &--li{
             text-align: center;
             line-height: 40px;
-            width: 50%;
+            width: 46.50%;
             height: 150px;
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
             font-size: 1.4rem;
+            margin: 5px;
+            box-shadow:  5px 5px 10px #989898,
+                        -5px -5px 10px #ffffff00;
             //animation: menu 1000ms 500ms both;
             &--last{
                 flex: 1 100%;
                 &__ul{
                     list-style-type: none;
                     display: flex;
-                    flex-flow: row wrap;
+                    flex-flow: row nowrap;
+                    margin-top: 5px;
                     &__li{
                         text-align: center;
-                        width: 33.33%;
+                        width: 30%;
                         padding-top: 5px;
                         padding-bottom: 5px;
                         font-size: 1.4rem;
+                        margin: 5px;
+                        box-shadow:  5px 5px 10px #989898,
+                                    -5px -5px 10px #ffffff00;
                         //animation: menu 1000ms 1200ms both;
                         & p{
                             background-color: transparent;

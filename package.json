@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JonathanChosson/meteo/issues"
   },
-  "homepage": "https://github.com/JonathanChosson/meteo#readme"
+  "homepage": "https://github.com/JonathanChosson/meteo#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
 }

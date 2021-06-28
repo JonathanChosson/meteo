@@ -21,6 +21,7 @@ main * {
   text-align: center;
   background-color: rgba(234, 234, 234, 0.8);
   padding-bottom: 15px;
+  box-shadow: 5px 5px 10px #989898, -5px -5px 10px #ffffff00;
 }
 .header__h1 {
   padding: 10px;
@@ -28,6 +29,23 @@ main * {
 .header__h1 a {
   color: black;
   text-decoration: none;
+}
+.header__h1__ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.header__h1__ul__li {
+  padding: 2px;
+  margin: 5px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(15.5px);
+  -webkit-backdrop-filter: blur(15.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .header__form {
   display: flex;
@@ -63,17 +81,20 @@ main * {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 5px;
 }
 .article__ul--li {
   text-align: center;
   line-height: 40px;
-  width: 50%;
+  width: 46.5%;
   height: 150px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   font-size: 1.4rem;
+  margin: 5px;
+  box-shadow: 5px 5px 10px #989898, -5px -5px 10px #ffffff00;
 }
 .article__ul--li--last {
   flex: 1 100%;
@@ -81,14 +102,17 @@ main * {
 .article__ul--li--last__ul {
   list-style-type: none;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+  margin-top: 5px;
 }
 .article__ul--li--last__ul__li {
   text-align: center;
-  width: 33.33%;
+  width: 30%;
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 1.4rem;
+  margin: 5px;
+  box-shadow: 5px 5px 10px #989898, -5px -5px 10px #ffffff00;
 }
 .article__ul--li--last__ul__li p {
   background-color: transparent;

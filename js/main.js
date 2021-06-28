@@ -4,16 +4,46 @@ document.querySelector('#ville').addEventListener('change', function(){
     ville = ville.replace(/-$/, "");
 })
 
+//Charge donnée dans cookies
+let mesRecherches = localStorage;
+let tableauRecherches =[];
+function majCookie() {
+    console.log('Maj Coopkie');
+    if (mesRecherches.length ==0){
+    mesRecherches.setItem(0, JSON.stringify(tableauRecherches));
+    }else {
+        tableauRecherches = JSON.parse(mesRecherches[0])
+    };
+    //Affiche l'historique si il y as lieux
+    console.log(tableauRecherches.length);
+    let afficheRecherche = document.getElementsByClassName('header__h1__p');
+    if(tableauRecherches.length == 0){
+        afficheRecherche[0].innerHTML = "";
+    }else
+    {
+        afficheRecherche[0].innerHTML = "Vos dernières recherches :";
+        for(i in tableauRecherches){
+            let afficheTableauRecherche = document.getElementsByClassName('header__h1__ul');
+            afficheTableauRecherche[0].innerHTML += `<li class="header__h1__ul__li">${tableauRecherches[i]}</li>`
+        }
+    }
+};
+majCookie();
+
+
+
+
 document.querySelector('.header__form--btn').addEventListener('click', function(event){
     event.preventDefault();
     //console.log(ville);
+
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${ville},fr&units=metric&appid=4802d916ef4ea849a434c682b46cdb10&lang=fr`;
     let url3j = `https://api.openweathermap.org/data/2.5/forecast?q=${ville},fr&units=metric&appid=4802d916ef4ea849a434c682b46cdb10&lang=fr`;
     fetch(url)
         .then((reponse) => 
         reponse.json()
         .then((data) => {
-            //console.log(data);
+            console.log(data);
             let tab = document.querySelectorAll('ul li');
             let i = 0;
             let iconCode =data.weather[0].icon;
@@ -23,7 +53,7 @@ document.querySelector('.header__form--btn').addEventListener('click', function(
                 tab[r].classList.remove("animation500delay");
             }
             setTimeout (function() {
-                tab[i].innerHTML = iconUrl + data.name;
+                tab[i].innerHTML = iconUrl + data.name + " " + data.sys.country;
                 tab[i].classList.add("animation500delay");
                 i += 1;
                 tab[i].innerHTML = tab[i].innerHTML.replace(tab[i].innerText, data.main.temp) + "°";
@@ -35,6 +65,14 @@ document.querySelector('.header__form--btn').addEventListener('click', function(
                 tab[i].innerHTML = tab[i].innerHTML.replace(tab[i].innerText, data.wind.speed) + " km/h";
                 tab[i].classList.add("animation500delay");
             }, 100);
+            //vérifie si la ville existe déjà et rempli le cookie au besoin
+            if(tableauRecherches.indexOf(ville) !== -1){
+
+            }else{
+                tableauRecherches.push(ville);
+                mesRecherches.setItem(0, JSON.stringify(tableauRecherches));
+            }
+            majCookie();
         })
         ).catch(erreur => alert('Ville non trouvé'));
         //prévision à 3, 6 et 9 heures 
