@@ -8,23 +8,37 @@ document.querySelector('#ville').addEventListener('change', function(){
 let mesRecherches = localStorage;
 let tableauRecherches =[];
 function majCookie() {
-    console.log('Maj Coopkie');
+    console.log('Maj Cookie');
     if (mesRecherches.length ==0){
     mesRecherches.setItem(0, JSON.stringify(tableauRecherches));
     }else {
         tableauRecherches = JSON.parse(mesRecherches[0])
     };
     //Affiche l'historique si il y as lieux
-    console.log(tableauRecherches.length);
     let afficheRecherche = document.getElementsByClassName('header__h1__p');
     if(tableauRecherches.length == 0){
         afficheRecherche[0].innerHTML = "";
     }else
     {
         afficheRecherche[0].innerHTML = "Vos dernières recherches :";
-        for(i in tableauRecherches){
-            let afficheTableauRecherche = document.getElementsByClassName('header__h1__ul');
-            afficheTableauRecherche[0].innerHTML += `<li class="header__h1__ul__li">${tableauRecherches[i]}</li>`
+        let afficheTableauRecherche = document.getElementsByClassName('header__span');
+        afficheTableauRecherche[0].innerHTML = "";
+        for(u in tableauRecherches){
+            afficheTableauRecherche[0].innerHTML += `<p class="header__span__p">${tableauRecherches[u]}</p>`
+        }
+    }
+    let btnHisto = document.getElementsByClassName('header__span__p');
+    console.log(btnHisto.length);
+    if(btnHisto.length == 0) {
+    }else {
+        for(t in btnHisto){
+            console.log(btnHisto[t].innerHTML);
+            if(btnHisto[t].innerHTML != undefined){
+                btnHisto[t].addEventListener('click', function(event){
+                event.preventDefault();
+                console.log(event.target.innerHTML);
+            })
+            }
         }
     }
 };
@@ -101,4 +115,5 @@ document.querySelector('.header__form--btn').addEventListener('click', function(
         }
         })
         ).catch(erreur => alert('Ville non trouvé'));
+        
 });
