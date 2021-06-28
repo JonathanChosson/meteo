@@ -12,7 +12,12 @@ Objectif : Réaliser un site qui serai en une page dynamique grace à JS et api 
 <img src="https://img.shields.io/badge/git%20-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white"/>
 
 ## Avancement
-...
+### V.0 
+Appel à l'API et affiche 4 infos sur la ville 
+### V.1
+Appel à l'API et affiche en plus 3 tuiles à +3, 6 et 9h
+### V.2
+Gestion et affichage des historique de recherche
 
 
 ## Auteur
