@@ -94,7 +94,7 @@ function appelAPI(url, url3j, ville) {
             }
             majCookie();
         })
-        ).catch(erreur => alert('Ville non trouvé'));
+        ).catch(erreur => alert('Ville non trouvée'));
         //prévision à 3, 6 et 9 heures 
         fetch(url3j)
         .then((reponse2) => 

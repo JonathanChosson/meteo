@@ -4,13 +4,16 @@
     &__ul{
         list-style-type: none;
         display: flex;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: stretch;
         margin-bottom: 5px;
+        width: 100%;
         //animation: menu 1000ms 0ms both;
         &--li{
             text-align: center;
             line-height: 40px;
-            width: 46.50%;
+            width: 46%;
             height: 150px;
             display: flex;
             flex-flow: column nowrap;
@@ -26,11 +29,13 @@
                 &__ul{
                     list-style-type: none;
                     display: flex;
-                    flex-flow: row nowrap;
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                    align-items: stretch;
                     margin-top: 5px;
                     &__li{
                         text-align: center;
-                        width: 30%;
+                        width: 29%;
                         padding-top: 5px;
                         padding-bottom: 5px;
                         font-size: 1.4rem;
