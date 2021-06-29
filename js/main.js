@@ -1,3 +1,9 @@
+let condition;
+let header = document.querySelectorAll('header');
+let sun = document.getElementById('sun');
+let clouds = document.getElementById('clouds');
+let snow = document.getElementById('stormy');
+let rain = document.getElementById('rain');
 let ville;
 document.querySelector('#ville').addEventListener('change', function(){
     ville = this.value.replace(/ /g, "-");
@@ -8,7 +14,6 @@ document.querySelector('#ville').addEventListener('change', function(){
 let mesRecherches = localStorage;
 let tableauRecherches =[];
 function majCookie() {
-    console.log('Maj Cookie');
     if (mesRecherches.length ==0){
     mesRecherches.setItem(0, JSON.stringify(tableauRecherches));
     }else {
@@ -28,15 +33,12 @@ function majCookie() {
         }
         // affiche les boutons de l'historique 
         let btnHisto = document.getElementsByClassName('header__span__p');
-        console.log(btnHisto.length);
         if(btnHisto.length == 0) {
         }else {
             for(t in btnHisto){
-                console.log(btnHisto[t].innerHTML);
                 if(btnHisto[t].innerHTML != undefined){
                     btnHisto[t].addEventListener('click', function(event){
                     event.preventDefault();
-                    console.log(event.target.innerHTML);
                     let url = `https://api.openweathermap.org/data/2.5/weather?q=${event.target.innerHTML},fr&units=metric&appid=4802d916ef4ea849a434c682b46cdb10&lang=fr`;
                     let url3j = `https://api.openweathermap.org/data/2.5/forecast?q=${event.target.innerHTML},fr&units=metric&appid=4802d916ef4ea849a434c682b46cdb10&lang=fr`;
                     appelAPI(url, url3j, event.target.innerHTML);
@@ -85,7 +87,6 @@ function appelAPI(url, url3j, ville) {
                 tab[i].classList.add("animation500delay");
             }, 100);
             //vérifie si la ville existe déjà et rempli le cookie au besoin
-            console.log(ville);
             if(tableauRecherches.indexOf(ville) !== -1){
 
             }else{
@@ -93,6 +94,13 @@ function appelAPI(url, url3j, ville) {
                 mesRecherches.setItem(0, JSON.stringify(tableauRecherches));
             }
             majCookie();
+            condition = data.weather[0].main
+            header[0].classList.remove("breezy", "cloudy", "hot", "stormy");
+            sun.classList.add('hidden');
+            clouds.classList.add('hidden');
+            snow.classList.add('hidden');
+            rain.classList.add('hidden');
+            modifHeader();
         })
         ).catch(erreur => alert('Ville non trouvée'));
         //prévision à 3, 6 et 9 heures 

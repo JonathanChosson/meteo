@@ -10,12 +10,37 @@
     <link rel="stylesheet" href="./public/style.css" />
     <script src="https://kit.fontawesome.com/0c9cc5d14e.js" crossorigin="anonymous"></script>
     <title>Simple Meteo</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGSN7TKZ0X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SGSN7TKZ0X');
+    </script>
 </head>
 <body>
     <main>
         <!-- Début header -->
         <div class="container">
-            <header class="header rounded">
+            <!-- hot -> dégagé cloudy -> nuageux stormy ->neige breezy -> pluie-->
+            <header class="header rounded ">
+                <div id="sun" class="hidden">
+                    <span class="sun"></span>
+                    <span class="sunx"></span>
+                </div>
+                <div id="clouds" class="hidden">
+                    <span class="cloud"></span>
+                    <span class="cloudx"></span>
+                </div>
+                <div id="stormy" class="hidden">
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <div id="rain" class="hidden">
+                    <i></i><i></i><i></i><i></i><i></i>
+                </div>
+                
                 <h1 class="header__h1">
                     <img src="./images/compass.svg" alt="Logo Simple Météo" />
                     <a href="./index.html">Simple météo</a>
@@ -66,6 +91,7 @@
     <!-- Fichier JS -->
     <script src="./js/animation.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/conditions.js"></script>
     <!-- JS bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
